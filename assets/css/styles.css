@@ -1,0 +1,233 @@
+@font-face {
+    font-family: GoboldCuts;
+    src: url(../fonts/Gobold-Cuts.otf);
+}
+
+@font-face {
+    font-family: Gobold;
+    src: url(../fonts/Gobold-Regular.otf);
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+
+body {
+    margin: 0px;
+    background: url(../img/bg_image.jpg);
+    background-size: cover;
+}
+
+
+/* heading of website */
+
+.header {
+    padding-left: 20px;
+}
+
+.header h1 {
+    font-family: "GoboldCuts";
+    font-weight: 100;
+    color: #17a2b8;
+}
+
+
+/* control button */
+
+.control-panel {
+    display: block;
+    margin: 10px 0px;
+}
+
+.control-panel button {
+    border: 2px solid #17a2b8;
+    border-radius: 5px;
+    background-color: transparent;
+    font-family: "Poppins";
+    color: #17a2b8;
+    font-size: 15px;
+    padding: 5px 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.control-panel button:hover {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.control-panel button:focus {
+    outline: none;
+}
+
+/* search box */
+
+.control-panel input {
+    background-color: transparent;
+    color: #17a2b8;
+    border: 2px solid #17a2b8;
+    border-radius: 5px;
+    font-family: "Poppins";
+    font-size: 15px;
+    padding: 5px 10px;
+    width: 100%;
+}
+
+.control-panel input:focus {
+    outline: none;
+}
+
+.control-panel p {
+    border: 2px solid #17a2b8;
+    border-radius: 5px;
+    background-color: #17a2b8;
+    color: #fff;
+    font-family: "Poppins";
+    font-size: 15px;
+    text-align: center;
+    padding: 5px 10px;
+    margin: 0px;
+}
+
+
+/* horizontal line to seperate elements */
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    width: 100%;
+}
+
+
+/* text area to take input */
+
+.inputField textarea {
+    padding: 15px;
+    font-family: "Poppins";
+    border-radius: 8px;
+    resize: none;
+    width: 80%;
+}
+
+.inputField textarea:focus {
+    outline: none;
+    border: 2px solid #17a2b8;
+    border-radius: 8px;
+}
+
+
+/* sub heading */
+
+.sub-heading h1 {
+    font-family: "Gobold";
+    font-weight: 100;
+    color: whitesmoke;
+}
+
+
+/* result table */
+
+* {
+    box-sizing: border-box;
+}
+
+.row {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.column {
+    border-radius: 8px;
+    background-color: white;
+    float: left;
+    height: 100%;
+    width: 23.5%;
+    padding: 20px 10px;
+    font-family: "Poppins";
+    font-size: 15px;
+}
+
+.seperator {
+    background-color: transparent;
+    float: left;
+    height: 300px;
+    width: 2%;
+    padding: 0px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* responsiveness for different screen */
+
+@media only screen and (min-width: 701px) and (max-width: 900px) {
+    .inputField textarea {
+        width: 90%;
+    }
+    .row {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .inputField textarea {
+        width: 95%;
+    }
+    .row {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    .column {
+        width: 100%;
+    }
+    .seperator {
+        height: 10px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .control-panel button {
+        font-size: 12px;
+        padding: 5px 5px;
+    }
+}
+
+@media only screen and (max-width: 357px) {
+    .control-panel input {
+        line-height: 45px;
+    }
+}
+
+@media print {
+    .control-panel {
+        display: none;
+    }
+}
+
+
+/* styling scrollbar */
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ccc;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #666;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

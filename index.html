@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Text Analyzer - Created By Aryansh Gupta</title>
+    <meta name="description" content="Text Analyzer is a website which analyze basic information about text, input by user. It generates statistics and analyze the content of a text.">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <!-- heading of website -->
+    <div class="header">
+        <h1>Text Analyzer</h1>
+    </div>
+
+    <!-- control button -->
+    <div class="control-panel">
+        <center>
+            <table>
+                <tr>
+                    <td><button onclick="printStats()"><i class="fas fa-print"></i>&nbsp;&nbsp;Print</button></td>
+                    <td><button onclick="undoText()"><i class="fas fa-undo-alt"></i>&nbsp;&nbsp;Undo</button></td>
+                    <td><button onclick="redoText()"><i class="fas fa-redo-alt"></i>&nbsp;&nbsp;Redo</button></td>
+                    <td colspan="2"><button onclick="clearText()"><i class="fas fa-trash-alt"></i>&nbsp;&nbsp;Clear</button></td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <input type="text" id="searchBox" placeholder="Type to search" oninput="searchValue()">
+                    </td>
+                    <td colspan="2">
+                        <p>Occured <b id="searchResult">0</b> times</p>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </div>
+
+    <!-- horizontal line to seperate elements  -->
+    <hr style="width: 75%;">
+
+    <!-- text area to take input -->
+    <div class="inputField">
+        <center><textarea placeholder="Type your text" spellcheck="true" rows="25" id="inputBox" oninput="analyzeText()"></textarea></center>
+    </div>
+
+    <!-- sub heading -->
+    <div class="sub-heading">
+        <center>
+            <h1>STATISTICS</h1>
+        </center>
+    </div>
+
+    <!-- result table -->
+    <div class="row">
+        <div class="column">
+            <!-- col-1 -->
+            Characters with spaces: <b id="charWithSpaces">0</b>
+            <hr> Characters without spaces: <b id="charWithoutSpaces">0</b>
+            <hr> Alphanumeric Characters: <b id="alphanumericCharacters">0</b>
+            <hr> Words: <b id="noOfWords">0</b>
+        </div>
+
+        <div class="seperator"></div>
+
+        <div class="column">
+            <!-- col-2 -->
+            Sentences: <b id="noOfSentences">0</b>
+            <hr> Paragraphs: <b id="noOfParagraphs">0</b>
+            <hr> Syllables: <b id="noOfSyllables">0</b>
+            <hr> Characters per Word: <b id="charPerWord">0</b>
+        </div>
+
+        <div class="seperator"></div>
+
+        <div class="column">
+            <!-- col-3 -->
+            Characters per Sentence: <b id="charactersPerSentence">0</b>
+            <hr> Words per Sentence: <b id="wordsPerSentence">0</b>
+            <hr> Characters per Paragraph: <b id="charPerParagraphs">0</b>
+            <hr> Words per Paragraph: <b id="wordsPerParagraphs">0</b>
+        </div>
+
+        <div class="seperator"></div>
+
+        <div class="column">
+            <!-- col-4 -->
+            Sentences per Paragraph: <b id="sentencePerParagraphs">0</b>
+            <hr> Average reading time: <b id="averageReadingTime">0</b> <b>min</b>
+            <hr> Unique Words: <b id="noOfUniqueWords">0</b>
+            <hr> Most Common Word: <b id="noOfCommonWord">0</b>
+        </div>
+    </div>
+
+    <script src="assets/js/stats.js"></script>
+    <script src="https://kit.fontawesome.com/fe6c1df55c.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
